@@ -1,0 +1,13 @@
+@import "../style/normalize.scss";
+
+.photos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+
+@media screen and (min-width: 600px) {
+    .photos {
+        grid-template-columns: 1fr 1fr;
+    }
+  }

@@ -1,0 +1,33 @@
+@import "../style/normalize.scss";
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+}
+
+.links div, .links a {
+    background-color: $dark003;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    color: $white001;
+
+}
+
+.links > div {
+    border: .8em solid $dark001;
+}
+
+.links img {
+    border-radius: .5em;
+}
+
+
+
+@media screen and (min-width: 600px) {
+    .links {
+        grid-template-columns: 1fr 1fr;
+    }
+  }

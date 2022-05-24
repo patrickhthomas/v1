@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@100;400;900&family=Staatliches&display=swap');
+
+$dark001: #0d0c18;
+$dark002: #3e3a3a;
+$dark003: #1c1a24;
+$dark004: #161415;
+$green001: #187145;
+$green002: #20965c;
+$green003: #26b26d;
+$red001: #D93633;
+$red002: #fc4455;
+$red003: #811620;
+$red004: #f3dbdd;
+$red005: #fcf4f5;
+$yellow001: #ffc415;
+$yellow002: #fed016;
+$yellow003: #fec315;
+$yellow004: #ffae12;
+$yellow005: #fe9a11;
+$white001: #fbfbfb;
+$white002: #ffffff;
+$blue001: #253C8E;
+$blue002: #1a2a61;
+$blue003: #4265d7;
+$blue004: #131930;
+
+$small-break: 650px;
+$medium-break: 800px;
+$large-break: 1080px;
+
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+
+.visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap; /* added line */
+      border: 0;
+}
+
+
+@mixin brand001 {
+    font-size: 60px;
+    font-family: 'Staatliches', cursive;
+    font-weight: bolder;
+    font-style: normal;
+    text-decoration: none;
+    line-height: 0px;
+    text-transform: uppercase;
+}
+
+@mixin brand002 {
+    font-size: 32.5px;
+    font-family: 'Staatliches', cursive;
+    font-weight: bolder;
+    font-style: normal;
+    text-decoration: none;
+}
+
+@mixin h1 {
+    font-size: 48px;
+    font-family: 'Staatliches', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .03rem;
+    font-weight: 500;
+}
+
+@mixin h2 {
+    font-size: 30px;
+    font-family: 'Staatliches', cursive;
+    font-weight: 500;
+    letter-spacing: .05rem;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@mixin body001 {
+    font-size: 18px;
+    font-family: 'Rokkitt', serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 140%;
+    text-decoration: none;
+}
+
+@mixin h3 {
+    font-size: 20px;
+font-family: 'Staatliches', cursive;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-weight: 500;
+}
+
+
+@mixin panGradient {
+    background: linear-gradient(180deg, #201C1D 50%, #201C1D 84.99%, $blue001 85%, $blue001 89.99%, $red001 90%, $red001 94.99%, $yellow001 95%, $yellow001 100%);
+}
+@mixin solidGradient {
+    background: linear-gradient(180deg, $blue002 50%, $blue002 94.99%, $yellow001 95%, $yellow001 100%);
+}
+@mixin fullWidth {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;   
+}
+
+@mixin innerShadow {
+    box-shadow: inset 0px 0px 4px 1px #3e3a3a42;
+}
+
+@mixin dropShadow {
+    box-shadow: -1px 1px 4px #3e3a3a;
+}
+
+$border-radius: 4px;
+
+@mixin primaryButton {
+    width: 100%;
+    max-width: 18em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include h2;
+    background-color: $yellow005;
+    border-radius: 4px;
+    color: $dark001;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    @include h1;
+}
+
+h2 {
+    @include h2;
+}
+
+h3 {
+    @include h3;
+}
+
+p, label, input, button, a, nav {
+    @include body001;
+}
+
+::placeholder {
+    @include body001();
+    color: $dark002;
+}
+//
+// Variables
+//
+// If you have an initialization partial (or equivalent), you should move these
+// lines to that file. NOTE: Edit the lines to remove "!default".
+
+// The font size set on the root html element.
+$base-font-size: 16px !default;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height: 24px !default;
+
+// The length unit in which to output vertical rhythm values.
+// Supported values: px, em, rem.
+$base-unit: 'em' !default;
+
+// The default font family.
+$base-font-family: null !default;
+
+// The font sizes for h1-h6.
+$h1-font-size: 2.2 * $base-font-size !default;
+$h2-font-size: 1.5 * $base-font-size !default;
+$h3-font-size: 1.17 * $base-font-size !default;
+$h4-font-size: 1 * $base-font-size !default;
+$h5-font-size: 0.83 * $base-font-size !default;
+$h6-font-size: 0.67 * $base-font-size !default;
+
+// The amount lists and blockquotes are indented.
+$indent-amount: 40px !default;
+
+
+
+// The following variable controls whether normalize-scss will output
+// font-sizes, line-heights and block-level top/bottom margins that form a basic
+// vertical rhythm on the page, which differs from the original Normalize.css.
+// However, changing any of the variables above will cause
+// $normalize-vertical-rhythm to be automatically set to true.
+$normalize-vertical-rhythm: false !default;
+
+input[type='email'],
+input[type='name'],
+input[type='text'],
+input[type='phone'] {
+    height: 2em;
+    padding-left: .5em;
+    border-radius: $border-radius;
+    border: 1px $dark001;
+    @include innerShadow();
+    background-color: $white001;
+    width: 12em;
+    max-width: 100%;
+}
+
+select:first-child {
+    color:#3e3a3a;
+}
+
+select {
+   padding: .5em;
+   max-width: 12em;
+}
+
+option {
+    padding: .5em;
+}
+
+textarea {
+    padding: .5em;
+    width: 100%;
+    max-width: 650px;
+    height: 10em;
+}

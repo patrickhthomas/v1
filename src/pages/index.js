@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import * as styles from "../components/index.module.scss"
 
 const links = [
   {
@@ -35,15 +35,14 @@ const links = [
 
 const samplePageLinks = [
   {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
+    text: "Web",
+    url: "web",
+    badge: true,
     description:
       "A simple example of linking to another page within a Gatsby site",
   },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
+  { text: "Branding", url: "branding" },
+  { text: "Illustration", url: "illustration" },
 ]
 
 const moreLinks = [
@@ -72,6 +71,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
+    <h1>Home</h1>
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
