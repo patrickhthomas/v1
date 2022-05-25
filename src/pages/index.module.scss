@@ -20,29 +20,26 @@
   margin: 0;
   background-color: $dark001;
   color: $white001;
-  display: flex;
-  flex-flow: column nowrap;
   @include dropShadow;
 }
 
 .illustration {
-  background-image: url("../images/illustrationCover.jpg");
-background-size: cover;
   grid-area: illustration;
   max-width: 100%;
   transition: ease-out .1s all;
 }
 
 .text {
+  display: grid;
   background-color: black;
   padding-left: $space-med;
   padding-right: $space-med;
   padding-bottom: $space-sm;
+  height: 100%;
+  overflow: hidden;
 }
 
 .web {
-  background-image: url("../images/webCover.jpg");
-  background-size: cover;
   max-width: 100%;
   grid-area: web;
   height: 30vh;
@@ -53,8 +50,6 @@ background-size: cover;
 
 
 .branding {
-  background-image: url("../images/brandingCover.png");
-background-size: cover;
   max-width: 100%;
   grid-area: branding;
   transition: ease-out .1s all;

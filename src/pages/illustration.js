@@ -11,13 +11,13 @@ import LinkList from "../components/linkList"
 
 const IllustrationPage = ({data, props}) => {
   const photos = data.allFile.edges.map(({node}, i) => (
-    <GatsbyImage key={i} aspectRatio={1} image={getImage(node)} alt={node.publicURL} />
+    <GatsbyImage key={i} layout='constrained' aspectRatio={1} image={getImage(node)} alt={node.publicURL} />
       ))
   const examples = [
     {
       imgSrc: photos[0],
       linkURL: "https://www.figma.com/proto/xV8vuUbqFpyN4nuPVEwazm/Critter?page-id=0%3A1&node-id=103%3A110&viewport=262%2C291%2C0.11&scaling=scale-down&starting-point-node-id=16%3A1299",
-      linkName: "Crittr",
+      linkName: "Mad Maxey",
       description: ''
     },
     {
@@ -64,10 +64,7 @@ const IllustrationPage = ({data, props}) => {
     <LinkList>
     {examples.map(({linkURL, linkName, imgSrc, description}, i) => (
       <div className='webList'>
-      <h2>{linkName}</h2>
-      <p>{description}</p>
       {imgSrc}
-    <a key={i} href={linkURL}>{linkName}</a>
     </div>
       ))}
     </LinkList>
@@ -79,23 +76,23 @@ const IllustrationPage = ({data, props}) => {
 export default IllustrationPage
 
 export const illustrationQuery = graphql`
-  query {
-    file {
-      name
-    }
-    allFile (filter: {relativeDirectory: {eq: "illustration"}}){
-      edges {
-        node {
-          id
-          publicURL
-          childImageSharp {
-            gatsbyImageData(
-              placeholder: DOMINANT_COLOR
-              formats: [AUTO, WEBP, AVIF]
-              )
-          }
+query {
+  file {
+    name
+  }
+  allFile (filter: {relativeDirectory: {eq: "illustration"}}sort: {order: ASC, fields: name}){
+    edges {
+      node {
+        id
+        publicURL
+        childImageSharp {
+          gatsbyImageData(
+            placeholder: DOMINANT_COLOR
+            formats: [AUTO, WEBP, AVIF]
+            )
         }
       }
     }
   }
+}
 `
