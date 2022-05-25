@@ -59,8 +59,8 @@ const BrandingPage = ({data}) => {
   ]
   return(
   <Layout>
-    <Seo title="Marketing Projects by Patrick Thomas Design" />
-    <h1>Marketing</h1>
+    <Seo title="Branding % Marketing Projects by Patrick Thomas Design" />
+    <h1>Branding</h1>
     <LinkList>
     {examples.map(({linkURL, linkName, imgSrc, description}, i) => (
       <div className='webList'>

@@ -1,7 +1,8 @@
+@import "../style/normalize.scss";
+
 .list {
   display: grid;
   margin: 0;
-  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
   --w: 280px;
   --n: 2;
   gap: var(--size-gap);
@@ -15,6 +16,10 @@
 
 .listItem {
   margin: 0;
+  height: 10em;
+  background-color: $dark001;
+  color: $white001;
+  padding: $space-med;
 }
 
 .listItem::marker {
