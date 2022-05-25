@@ -1,22 +1,36 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.scss"
+import * as styles from "../pages/index.module.scss"
+import LinkList from "../components/linkList"
 
 
 const pageLinks = [
   {
     text: "Web",
     url: "web",
+    image: <StaticImage src="../images/webcover.jpg"/>,
+    className: styles.web,
     badge: true,
     description:
       "A simple example of linking to another page within a Gatsby site",
   },
-  { text: "Branding", url: "branding" },
-  { text: "Illustration", url: "illustration" },
+  { 
+    text: "Branding",
+    url: "branding",
+    image: <StaticImage src="../images/webcover.jpg"/>,
+    className: styles.branding,
+  },
+    
+  { 
+    text: "Illustration", 
+    url: "illustration",
+    className: styles.illustration,
+    image: <StaticImage src="../images/webcover.jpg"/>,
+  },
 ]
 
 
@@ -26,27 +40,27 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Home</h1>
-    <div className={styles.textCenter}>
+    <div className={styles.textLeft}>
       <h1>
         Patrick Thomas - Digital Designer
       </h1>
+      <p>My experience covers a wide range of design services including ground-up brand development, product packaging, custom built websites with e-commerce capability, and a whole lot more! Regardless of the size or nature of your project, I’ll always be sure to take a wholistic approach that leaves you with an effective and long lasting result.</p>
     </div>
-    <ul className={styles.list}>
+    <div className={styles.list}>
       {pageLinks.map(link => (
                 <a
-                className={styles.listItemLink}
+                className={link.className}
                 href={`${link.url}${utmParameters}`}
               >
-        <li key={link.url} className={styles.listItem}>
+        <div className={styles.text} key={link.url}>
 
-            {link.text} ↗
+            <h2>{link.text}</h2>
           
           <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
+        </div>
         </a>
       ))}
-    </ul>
+    </div>
   </Layout>
 )
 
