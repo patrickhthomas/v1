@@ -1,0 +1,26 @@
+@import "../style/normalize.scss";
+
+.divider {
+    height: .2em;
+    background-color: black;
+    width: 100%;
+}
+
+.links {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 650px) {
+    .links {
+        margin: 0 2em 0 0;
+        padding: var(--space-4) var(--size-gutter);
+        display: flex;
+        flex-flow: row noWrap;
+    }
+    
+    .link {
+        padding: 0 0 0 1em;
+    }
+  }

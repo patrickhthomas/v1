@@ -22,6 +22,7 @@
   color: $white001;
   display: flex;
   flex-flow: column nowrap;
+  @include dropShadow;
 }
 
 .illustration {

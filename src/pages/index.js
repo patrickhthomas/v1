@@ -55,8 +55,7 @@ const IndexPage = () => (
         <div className={styles.text} key={link.url}>
 
             <h2>{link.text}</h2>
-          
-          <p className={styles.listItemDescription}>{link.description}</p>
+        
         </div>
         </a>
       ))}
