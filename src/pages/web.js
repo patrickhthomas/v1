@@ -22,14 +22,26 @@ const WebPage = ({data}) => {
     },
     {
       imgSrc: photos[1],
-      linkURL: "https://www.figma.com/proto/xcE96toHlmSD2rypfzD9ss/Affirmative-Final?page-id=131%3A1264&node-id=131%3A1265&starting-point-node-id=199%3A199",
-      linkName: "Affirmative iOS App",
-      description: "This is a sample Description, CHECK IT OUT!"
+      linkURL: "https://chandelierbakery.wpcomstaging.com",
+      linkName: "Chandlelier Bakery",
+      description: "E-Commerce website built with Wordpress and Elementor, integrated with Ecwid."
     },
     {
       imgSrc: photos[2],
       linkURL: "https://agitated-mayer-a33ac3.netlify.app",
       linkName: "Juneteenth",
+      description: "This is a sample Description, CHECK IT OUT!"
+    },
+    {
+      imgSrc: photos[8],
+      linkURL: "https://www.figma.com/proto/xcE96toHlmSD2rypfzD9ss/Affirmative-Final?page-id=131%3A1264&node-id=131%3A1265&starting-point-node-id=199%3A199",
+      linkName: "Affirmative iOS App",
+      description: "This is a sample Description, CHECK IT OUT!"
+    },
+    {
+      imgSrc: photos[5],
+      linkURL: "https://www.blubgrease.com",
+      linkName: "BlubGrease",
       description: "This is a sample Description, CHECK IT OUT!"
     },
     {
@@ -42,12 +54,6 @@ const WebPage = ({data}) => {
       imgSrc: photos[4],
       linkURL: "https://invis.io/YU12Q7R4V7FD#/430482452_Landing_Page",
       linkName: "Coop",
-      description: "This is a sample Description, CHECK IT OUT!"
-    },
-    {
-      imgSrc: photos[5],
-      linkURL: "https://www.blubgrease.com",
-      linkName: "BlubGrease",
       description: "This is a sample Description, CHECK IT OUT!"
     },
     {
@@ -73,7 +79,7 @@ const WebPage = ({data}) => {
       <h2>{linkName}</h2>
       <p>{description}</p>
       {imgSrc}
-    <a key={i} href={linkURL} target="_blank" rel="noopener">{linkName}</a>
+    <a key={i} href={linkURL} target="_blank" rel="noopener">View {linkName} &#8594;</a>
     </div>
       ))}
     </LinkList>

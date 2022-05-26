@@ -36,9 +36,14 @@ const Header = ({ siteTitle }) => (
   <Link  className={styles.link} to="/web">Web</Link>
   <Link  className={styles.link} to="/branding">Branding</Link>
   <Link  className={styles.link} to="/illustration">Illustration</Link>
+  <a className={styles.link} href="mailto:patrick@patrickthomas.design"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M36 48L24 39L15 48V33L39 9L7.158 26.367L0 21L48 0L36 48Z" fill="white"/>
+  </svg>
+  </a>
 </div>
-  
+
   </header>
+
   <div className={styles.divider}></div>
   </>
   )

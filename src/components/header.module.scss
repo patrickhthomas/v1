@@ -18,6 +18,7 @@
     padding: var(--space-4) var(--size-gutter);
     display: flex;
     flex-flow: row noWrap;
+    align-items: center;
 }
 
 a {
@@ -28,6 +29,18 @@ a {
     padding: 0 0 0 1em;
 }
 
+.contact {
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    place-items: center;
+    justify-content: center;
+}
+
+.link svg {
+    width: 1.5em;
+}
 
 @media screen and (min-width: 650px) {
     .links {

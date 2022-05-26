@@ -16,39 +16,39 @@ const BrandingPage = ({data}) => {
   const examples = [
     {
       imgSrc: photos[0],
-      linkURL: "https://www.figma.com/proto/xV8vuUbqFpyN4nuPVEwazm/Critter?page-id=0%3A1&node-id=103%3A110&viewport=262%2C291%2C0.11&scaling=scale-down&starting-point-node-id=16%3A1299",
+      linkURL: "https://www.figma.com/proto/YB7mJYng1GCS6ELbddgYG2/05%2F21%2F22-Portfolio-Site?page-id=25%3A19&node-id=28%3A2&viewport=-775%2C444%2C0.12&scaling=min-zoom",
       linkName: "Juneteenth Freedom Celebration",
-      description: "Marketing/print materials, logos, sitemaps, t-shirts."
+      description: "Posters/print materials, logos, sitemap, t-shirts."
     },
     {
       imgSrc: photos[1],
-      linkURL: "https://invis.io/YU12Q7R4V7FD#/430482452_Landing_Page",
+      linkURL: "https://www.figma.com/proto/YB7mJYng1GCS6ELbddgYG2/05%2F21%2F22-Portfolio-Site?page-id=25%3A32&node-id=25%3A36&viewport=557%2C340%2C0.15&scaling=min-zoom",
       linkName: "Summer of Pride Block Party",
-      description: "Posters and print materials."
+      description: "Posters for a Pride event in Vancouver, WA."
     },
     {
       imgSrc: photos[2],
-      linkURL: "https://www.figma.com/proto/xcE96toHlmSD2rypfzD9ss/Affirmative-Final?page-id=131%3A1264&node-id=131%3A1876&starting-point-node-id=199%3A199",
+      linkURL: "https://www.figma.com/proto/YB7mJYng1GCS6ELbddgYG2/05%2F21%2F22-Portfolio-Site?page-id=32%3A3&node-id=33%3A10&viewport=279%2C137%2C0.1&scaling=min-zoom",
       linkName: "Dandelion",
-      description: "Swag branding + product packaging."
+      description: "All the brandings and things, marketing materials, storefront signage, product packaging."
     },
     {
-      imgSrc: photos[3],
-      linkURL: "https://dazzling-lichterman-e927f4.netlify.app/home.html",
-      linkName: "Stickers",
-      description: "Promotional stickers."
+      imgSrc: photos[8],
+      linkURL: "https://www.figma.com/proto/YB7mJYng1GCS6ELbddgYG2/05%2F21%2F22-Portfolio-Site?page-id=33%3A11&node-id=33%3A19&viewport=163%2C120%2C0.14&scaling=min-zoom",
+      linkName: "Product Packaging",
+      description: "Package design and product photography."
     },
     {
-      imgSrc: photos[4],
-      linkURL: "https://practical-lichterman-fb5913.netlify.app",
-      linkName: "Wish Boxes",
-      description: "Product packaging for a monthly subscription box."
+      imgSrc: photos[6],
+      linkURL: "https://www.figma.com/proto/OSJdwXvtGQgNEGScjaES63/Send-Help?page-id=11%3A191&node-id=21%3A13&starting-point-node-id=21%3A13",
+      linkName: "Send Help",
+      description: "Brand development and style guide."
     },
     {
-      imgSrc: photos[5],
-      linkURL: "https://agitated-mayer-a33ac3.netlify.app",
-      linkName: "Local Ads",
-      description: "Quarterly advertisements for local newpapers and magazines."
+      imgSrc: photos[7],
+      linkURL: "https://www.figma.com/proto/fztvLGB61ksyehRi6JXiFv/Odyssey-World-Style-Guide?page-id=11%3A191&node-id=21%3A13&starting-point-node-id=21%3A13",
+      linkName: "Odyssey World Rebrand",
+      description: "Rebrand for a non-profit."
     },
   ]
   return(
@@ -61,6 +61,7 @@ const BrandingPage = ({data}) => {
       <h2>{linkName}</h2>
       <p>{description}</p>
       {imgSrc}
+      <a key={i} href={linkURL} target="_blank" rel="noopener">View Details &#8594;</a>
     </div>
       ))}
     </LinkList>

@@ -6,7 +6,7 @@
     grid-gap: 1em;
 }
 
-.links div, .links a {
+.links div {
     background-color: $dark003;
     padding: 1em;
     display: grid;
@@ -16,12 +16,22 @@
 
 }
 
+.links a {
+    text-transform: uppercase;
+    place-self: end;
+    text-align: right;
+}
+
 .links > div {
     border: .8em solid $dark001;
 }
 
 .links img {
     border-radius: .5em;
+}
+
+.links h2, .links p {
+    margin: 0;
 }
 
 
