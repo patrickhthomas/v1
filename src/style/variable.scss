@@ -20,7 +20,7 @@ $yellow005: #fe9a11;
 $white001: #fbfbfb;
 $white002: #ffffff;
 $blue001: #253C8E;
-$blue002: #1a2a61;
+$blue002: #b4bfe4;
 $blue003: #4265d7;
 $blue004: #131930;
 
@@ -32,7 +32,21 @@ $space-sm: .5em;
 $space-med: 1em;
 $space-lg: 2em;
 
+$crazy-gradient: linear-gradient(45deg, #C669FF -3.33%, #C669FF 17.25%, #9003E7 17.27%, #9003E7 33.36%, #7AC4ED 33.37%, #7AC4ED 48.8%, #C669FF 48.81%, #C569FE 59.7%, #8842B3 59.73%, #8842B3 75.44%, #572C72 75.57%, #572C72 88.23%, #211429 99.39%);
 
+@keyframes colorCycle {
+    0%    { background-color: $blue001; }
+    20%   { background-color: $green001; }
+    80%   { background-color: $red001; background-size: 140px 140px;}
+    100%  { background-color: $yellow001; }
+  }
+
+
+  @keyframes colorSpin {
+    0%    { background-position: 0%;  background-size: 100%;}
+    60%   { background-position: 70%;  background-size: 170%;}
+    100%  { background-position: 0%;  background-size: 100%;}
+  }
 
 button {
     display: inline-block;

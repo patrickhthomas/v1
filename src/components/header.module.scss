@@ -2,14 +2,31 @@
 
 .divider {
     height: .2em;
-    background-color: black;
+    background: $crazy-gradient repeat;
     width: 100%;
+    animation: colorSpin 15s ease-in-out infinite;
+}
+
+
+
+.header {
+    background-color: $dark001;
 }
 
 .links {
-    display: none;
+    margin: 0 2em 0 0;
+    padding: var(--space-4) var(--size-gutter);
+    display: flex;
+    flex-flow: row noWrap;
 }
 
+a {
+    color: white;
+}
+
+.link {
+    padding: 0 0 0 1em;
+}
 
 
 @media screen and (min-width: 650px) {
@@ -18,6 +35,10 @@
         padding: var(--space-4) var(--size-gutter);
         display: flex;
         flex-flow: row noWrap;
+    }
+
+    a {
+        color: white;
     }
     
     .link {

@@ -32,17 +32,21 @@
 .text {
   display: grid;
   background-color: black;
-  padding-left: $space-med;
-  padding-right: $space-med;
-  padding-bottom: $space-sm;
   height: 100%;
   overflow: hidden;
+}
+
+.container {
+  opacity: .5;
+  overflow: hidden;
+  grid-area: 1/1;
+  position: relative;
+  place-items: center;
 }
 
 .web {
   max-width: 100%;
   grid-area: web;
-  height: 30vh;
   transition: ease-out .1s all;
 }
 
@@ -56,7 +60,7 @@
 }
 
 .web:hover, .illustration:hover, .branding:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
   transition: ease-out .1s all;
 }
 
@@ -68,6 +72,7 @@
 
 .textLeft {
   text-align: left;
+  max-width: 650px;
 }
 
 .intro {
@@ -85,6 +90,12 @@
       'web illustration';
   }
   .web {
-    height: 80vh;
+    height: 48vw;
+    width: 65vw;
+  }
+
+  .illustration, .branding {
+    height: 23.5vw;
+    width: 25vw;
   }
 }

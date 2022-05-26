@@ -12,7 +12,7 @@ const pageLinks = [
   {
     text: "Web",
     url: "web",
-    image: <StaticImage src="../images/cover/webCover.jpg" style={{gridArea: "1/1",}} layout="fullWidth" aspectRatio={1/4}/>,
+    image: <StaticImage src="../images/cover/webCover.jpg" style={{gridArea: "1/1",}} layout="constrained" aspectRatio={1/1}/>,
     className: styles.web,
     badge: true,
     description:
@@ -21,7 +21,7 @@ const pageLinks = [
   { 
     text: "Branding",
     url: "branding",
-    image: <StaticImage src="../images/cover/brandingCover.png"style={{gridArea: "1/1",}} layout="fixed" width={800} aspectRatio={8/3} objectFit="cover"/>,
+    image: <StaticImage src="../images/cover/brandingCover.png"style={{gridArea: "1/1",}} layout="constrained" aspectRatio={3/3}/>,
     className: styles.branding,
   },
     
@@ -29,7 +29,7 @@ const pageLinks = [
     text: "Illustration", 
     url: "illustration",
     className: styles.illustration,
-    image: <StaticImage src="../images/cover/illustrationCover.png"style={{gridArea: "1/1",}} layout="fixed" width={800} aspectRatio={8/3} objectFit="cover"/>,
+    image: <StaticImage src="../images/cover/illustrationCover.png"style={{gridArea: "1/1",}} layout="constrained" aspectRatio={1} objectFit="cover"/>,
   },
 ]
 
@@ -54,10 +54,10 @@ const IndexPage = () => (
               >
         <div className={styles.text} key={link.url}>
 
-            <h2 style={{zIndex: '10', gridArea: "1/1", position: "relative",placeItems: "center",}}>
+            <h2 style={{paddingLeft: '.5em', zIndex: '10', gridArea: "1/1", position: "relative",placeItems: "center",}}>
               {link.text}
             </h2>
-            <div style={{ top: '3em', overflow: 'hidden', gridArea: "1/1", position: "relative",placeItems: "center",}}>{link.image}</div>
+            <div className={styles.container}>{link.image}</div>
         
         </div>
         </a>
