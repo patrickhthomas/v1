@@ -9,7 +9,6 @@ const Header = ({ siteTitle }) => (
   className={styles.header}
   style={{
     margin: `0 auto`,
-    padding: `var(--space-4) var(--size-gutter)`,
     display: `flex`,
     alignItems: `center`,
     justifyContent: `space-between`,

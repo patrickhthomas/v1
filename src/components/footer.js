@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import * as styles from '../components/footer.module.scss'
 
 const Footer = ({ siteTitle }) => (
-  <>
+  <div className={styles.container}>
 <div className={styles.divider}></div>
   <footer
   className={styles.footer}
@@ -27,7 +27,7 @@ const Footer = ({ siteTitle }) => (
   </Link>
   
   </footer>
-  </>
+  </div>
   )
   
   

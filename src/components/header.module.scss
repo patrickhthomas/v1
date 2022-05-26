@@ -19,6 +19,7 @@
     display: flex;
     flex-flow: row noWrap;
     align-items: center;
+    overflow-x: scroll;
 }
 
 a {

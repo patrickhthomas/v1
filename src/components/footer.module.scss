@@ -1,5 +1,7 @@
 @import "../style/normalize.scss";
-
+.container {
+    width: 100vw;
+}
 .divider {
     height: .2em;
     background-color: $dark002;

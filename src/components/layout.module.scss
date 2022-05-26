@@ -1,0 +1,30 @@
+@import "../style/normalize.scss";
+
+main, header, footer {
+  width: 100vw;
+}
+
+html {
+  background-color: $white001;
+  width: 100vw;
+}
+
+main {
+  max-width: 1200px;
+}
+
+h2, h3, p {
+  padding-left: 1em;
+}
+
+h1 {
+  padding-left: .5em;
+}
+
+@media screen and (min-width: 650px) {
+
+    
+  main {
+      padding: 1em;
+  }
+}

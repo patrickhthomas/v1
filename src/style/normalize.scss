@@ -51,17 +51,18 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 
-body {
-  margin: 0;
-}
 
 html,
 body {
+  margin: 0 0 0 0;
+  padding: 0;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100%;
+  width: 100vw;
 }
 /**
  * Add the correct display in IE 9-.
@@ -164,7 +165,7 @@ h1 {
 
   ol,
   ul {
-    padding: 0 0 0 $indent-amount;
+    padding: 0 0 0 0;
   }
 }
 
