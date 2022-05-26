@@ -23,7 +23,7 @@ const WebPage = ({data}) => {
     {
       imgSrc: photos[1],
       linkURL: "https://chandelierbakery.wpcomstaging.com",
-      linkName: "Chandlelier Bakery",
+      linkName: "Chandelier Bakery",
       description: "E-Commerce website built with Wordpress and Elementor, integrated with Ecwid."
     },
     {
